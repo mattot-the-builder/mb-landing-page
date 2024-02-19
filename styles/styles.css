@@ -1,0 +1,256 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+	margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+	isolation: isolate;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap');
+
+html {
+	--background: hsl(0, 0%, 0%);
+	--text: hsl(0, 0%, 75%);
+	--text-header: hsl(0, 0%, 89%);
+	--text-label: hsl(0, 0%, 64%);
+	--accent: hsl(120, 60%, 50%);
+
+	--accent-shadow: hsla(120, 60%, 50%, 0.5);
+
+	--spacing-1: 0.8rem;
+	--spacing-2: 1.6rem;
+	--spacing-3: 2.4rem;
+
+	font-family: "Plus Jakarta Sans", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+	font-size: 18px;
+}
+
+header {
+	background-color: var(--background);
+	padding: var(--spacing-2);
+}
+
+.brand-logo {
+	color: white;
+	margin: 0 auto;
+	max-width: 7.2rem;
+}
+
+.section {
+	padding: var(--spacing-3);
+	text-align: center;
+	overflow-x: auto;
+
+	.section__header {
+		font-family: "Plus Jakarta Sans", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 600;
+		font-style: normal;
+	}
+}
+
+.section--black {
+	background-color: var(--background);
+	color: var(--text);
+}
+
+.section--hero {
+	padding: 0;
+
+	.section--hero__header {
+		color: var(--text-header);
+		font-size: 2.4em;
+
+		span {
+			color: hsl(0, 0%, 100%);
+		}
+	}
+}
+
+
+.section--feedback {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-2);
+}
+
+.section__feedback-images-list {
+	display: flex;
+	justify-content: center;
+	gap: var(--spacing-2);
+	list-style-type: none;
+	padding: 0;
+	overflow-x: scroll;
+	height: 24rem;
+
+	li {
+		border-radius: 0.4rem;
+		overflow: hidden;
+		flex-shrink: 0;
+
+		img {
+			height: 100%;
+			width: auto;
+			object-fit: cover;
+		}
+	}
+}
+
+.section__advantages-list {
+	display: grid;
+	place-items: center;
+	padding: 0;
+	margin-top: var(--spacing-1);
+}
+
+.button--cta-wrapper {
+	margin: var(--spacing-2) auto;
+
+	.button--cta {
+		background-image: linear-gradient(to bottom, hsl(90, 57%, 54%), hsl(120, 60%, 50%));
+		color: hsl(0, 0%, 100%);
+		padding: var(--spacing-1) var(--spacing-2);
+		border-radius: 1.6rem;
+		text-decoration-line: none;
+		box-shadow: 0 1px 5px 2px var(--accent-shadow);
+	}
+
+	.button--cta:hover {
+		background-image: linear-gradient(to top, hsl(90, 57%, 44%), hsl(120, 60%, 40%));
+	}
+}
+
+.mockup {
+	display: flex;
+	justify-content: center;
+	gap: 0;
+	list-style-type: none;
+	padding: 0;
+	overflow-x: auto;
+	height: 16rem;
+
+	li {
+		overflow: hidden;
+		flex-shrink: 0;
+		margin-left: -4.8rem;
+
+		img {
+			height: 100%;
+			width: auto;
+			object-fit: cover;
+		}
+	}
+
+	/* display: flex; */
+	/* gap: var(--spacing-2); */
+	/* list-style-type: none; */
+	/* padding: 0; */
+	/* overflow-x: scroll; */
+	/* height: 24rem; */
+	/**/
+	/* li { */
+	/* 	border-radius: 0.4rem; */
+	/* 	overflow: hidden; */
+	/* 	flex-shrink: 0; */
+	/**/
+	/* 	img { */
+	/* 		height: 100%; */
+	/* 		width: auto; */
+	/* 		object-fit: cover; */
+	/* 	} */
+	/* } */
+}
+
+
+.footer {
+	padding: var(--spacing-1) var(--spacing-3);
+	display: grid;
+	gap: var(--spacing-1);
+
+	.footer__social-media {
+		display: flex;
+		justify-content: center;
+		gap: var(--spacing-2);
+
+		svg {
+			max-width: 2.4rem;
+			color: var(--text-label);
+		}
+
+		svg:hover {
+			/* color: var(--accent); */
+			color: white;
+		}
+
+	}
+
+	.footer__copyright {
+		font-size: 0.5em;
+		font-weight: 400;
+		margin: 0 auto;
+	}
+}
