@@ -141,7 +141,7 @@ header {
 .section__feedback-images-list {
 	display: flex;
 	justify-content: center;
-	gap: var(--spacing-2);
+	gap: var(--spacing-1);
 	list-style-type: none;
 	padding: 0;
 	overflow-x: scroll;
@@ -151,6 +151,7 @@ header {
 		border-radius: 0.4rem;
 		overflow: hidden;
 		flex-shrink: 0;
+		width: 12rem;
 
 		img {
 			height: 100%;
@@ -196,6 +197,7 @@ header {
 	li {
 		overflow: hidden;
 		flex-shrink: 0;
+		width: 16rem;
 		margin-left: -4.8rem;
 
 		img {
