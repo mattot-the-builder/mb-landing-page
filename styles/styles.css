@@ -94,6 +94,10 @@ header {
 	padding: var(--spacing-2);
 }
 
+.text-light {
+	color: var(--text-header);
+}
+
 .brand-logo {
 	color: white;
 	margin: 0 auto;
