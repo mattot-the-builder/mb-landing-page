@@ -76,6 +76,7 @@ html {
 	--text-label: hsl(0, 0%, 64%);
 	--accent: hsl(120, 60%, 50%);
 
+	--accent-on-white: hsl(120, 60%, 40%);
 	--accent-shadow: hsla(120, 60%, 50%, 0.5);
 
 	--spacing-1: 0.8rem;
@@ -96,6 +97,10 @@ header {
 
 .text-light {
 	color: var(--text-header);
+}
+
+.text-accent {
+	color: var(--accent-on-white);
 }
 
 .brand-logo {
