@@ -177,11 +177,18 @@ header {
 	}
 }
 
-.section__advantages-list {
+.section__advantages {
 	display: grid;
-	place-items: center;
+	justify-content: center;
+}
+
+.section__advantages__list {
 	padding: 0;
 	margin-top: var(--spacing-1);
+
+	li {
+		text-align: start;
+	}
 }
 
 .button--cta-wrapper {
