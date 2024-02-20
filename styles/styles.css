@@ -155,7 +155,7 @@ header {
 
 .section__feedback-images-list {
 	display: flex;
-	justify-content: center;
+	justify-content: start;
 	gap: var(--spacing-1);
 	list-style-type: none;
 	padding: 0;
@@ -204,7 +204,7 @@ header {
 .mockup {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: start;
 	gap: 0;
 	list-style-type: none;
 	padding: 0;
@@ -251,5 +251,15 @@ header {
 		font-size: 0.5em;
 		font-weight: 400;
 		margin: 0 auto;
+	}
+}
+
+@media (min-width: 1024px) {
+	.mockup {
+		justify-content: center;
+	}
+
+	.section__feedback-images-list {
+		justify-content: center;
 	}
 }
