@@ -160,12 +160,14 @@ header {
 
 .section__feedback-images-list {
 	display: flex;
-	justify-content: start;
+	flex-direction: column;
+	justify-content: center;
 	gap: var(--spacing-1);
 	list-style-type: none;
 	padding: 0;
-	overflow-x: scroll;
-	height: 24rem;
+	margin: 0 auto;
+	/* overflow-x: scroll; */
+	/* height: 24rem; */
 
 	li {
 		border-radius: 0.4rem;
@@ -194,6 +196,21 @@ header {
 	li {
 		text-align: start;
 	}
+}
+
+.button__telegram {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: hsl(206, 100%, 47%);
+	color: var(--text-header);
+	padding: var(--spacing-1) var(--spacing-2);
+	gap: var(--spacing-1);
+}
+
+.button__telegram:hover {
+	background-color: hsl(206, 100%, 40%);
+	color: hsl(0, 0%, 100%);
 }
 
 .button--cta-wrapper {
@@ -248,14 +265,6 @@ header {
 		justify-content: center;
 		gap: var(--spacing-2);
 
-		svg {
-			max-width: 2.4rem;
-			color: var(--text-label);
-		}
-
-		svg:hover {
-			color: white;
-		}
 
 	}
 
@@ -264,6 +273,15 @@ header {
 		font-weight: 400;
 		margin: 0 auto;
 	}
+}
+
+.footer__social-media__icon {
+	max-width: 2.4rem;
+	color: var(--text-label);
+}
+
+.footer__social-media__icon :hover {
+	color: white;
 }
 
 @media (min-width: 1024px) {
