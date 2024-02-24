@@ -83,6 +83,10 @@ html {
 	--spacing-2: 1.6rem;
 	--spacing-3: 2.4rem;
 
+	--border-1: 0.4rem;
+	--border-2: 0.8rem;
+	--border-3: 1.6rem;
+
 	font-family: "Plus Jakarta Sans", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 600;
@@ -123,7 +127,7 @@ header {
 }
 
 .section__image {
-	border-radius: 0.4rem;
+	border-radius: var(--border-1);
 	margin: var(--spacing-2) auto;
 }
 
@@ -170,7 +174,7 @@ header {
 	/* height: 24rem; */
 
 	li {
-		border-radius: 0.4rem;
+		border-radius: var(--border-1);
 		overflow: hidden;
 		flex-shrink: 0;
 		width: 12rem;
@@ -182,6 +186,32 @@ header {
 			object-fit: cover;
 		}
 	}
+}
+
+.section__neck-type {
+	background-color: var(--background);
+	padding: var(--spacing-1);
+	border-radius: var(--border-1);
+	color: var(--text);
+	margin-top: var(--spacing-2);
+
+	h3 {
+		margin-bottom: var(--spacing-1);
+	}
+
+	ul {
+		list-style-type: none;
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		gap: var(--spacing-1);
+		padding: 0;
+
+		li>img {
+			height: 2.4rem;
+			max-width: 100%;
+		}
+	}
+
 }
 
 .section__advantages {
@@ -220,7 +250,7 @@ header {
 		background-image: linear-gradient(to bottom, hsl(90, 57%, 54%), hsl(120, 60%, 50%));
 		color: hsl(0, 0%, 100%);
 		padding: var(--spacing-1) var(--spacing-2);
-		border-radius: 1.6rem;
+		border-radius: var(--border-3);
 		text-decoration-line: none;
 		box-shadow: 0 1px 5px 2px var(--accent-shadow);
 	}
@@ -284,6 +314,14 @@ header {
 	color: white;
 }
 
+@media (min-width: 768px) {
+	.section__neck-type {
+		ul {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
+
 @media (min-width: 1024px) {
 	.mockup {
 		justify-content: center;
@@ -291,5 +329,11 @@ header {
 
 	.section__feedback-images-list {
 		justify-content: center;
+	}
+
+	.section__neck-type {
+		ul {
+			grid-template-columns: repeat(3, 1fr);
+		}
 	}
 }
