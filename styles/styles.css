@@ -94,6 +94,10 @@ html {
 	font-size: 18px;
 }
 
+body {
+	background-color: white;
+}
+
 header {
 	background-color: var(--background);
 	padding: var(--spacing-2);
