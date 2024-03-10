@@ -167,15 +167,11 @@ header {
 }
 
 .section__feedback-images-list {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: var(--spacing-1);
+	display: grid;
+	gap: var(--spacing-2);
 	list-style-type: none;
 	padding: 0;
 	margin: 0 auto;
-	/* overflow-x: scroll; */
-	/* height: 24rem; */
 
 	li {
 		border-radius: var(--border-1);
@@ -324,6 +320,10 @@ header {
 			grid-template-columns: repeat(2, 1fr);
 		}
 	}
+
+	.section__feedback-images-list {
+		grid-template-columns: repeat(3, 1fr);
+	}
 }
 
 @media (min-width: 1024px) {
@@ -332,7 +332,7 @@ header {
 	}
 
 	.section__feedback-images-list {
-		justify-content: center;
+		grid-template-columns: repeat(4, 1fr);
 	}
 
 	.section__neck-type {
